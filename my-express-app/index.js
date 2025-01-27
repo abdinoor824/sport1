@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const userRoute = require("./routes/user");
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 10000;
 
 app.use(express.json());
 dotenv.config();
