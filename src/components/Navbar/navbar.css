@@ -1,0 +1,76 @@
+/* General Navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar li {
+    margin: 0 10px;
+  }
+  
+  .navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar li a:hover {
+    background-color: #111;
+  }
+  
+  /* Responsive design for small screens */
+  @media screen and (max-width: 768px) {
+    .navbar ul {
+     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+  
+    .navbar li {
+      margin: 10px 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+  
+    .navbar li {
+      margin: 10px 0;
+      /* display: block; Make list items block elements */
+    }
+  
+    .navbar li a {
+      padding: 8px 12px;
+    }
+  }
+  
