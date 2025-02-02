@@ -9,7 +9,9 @@ const PORT = process.env.PORT || 10000;
 
 app.use(express.json());
 dotenv.config();
-app.use(cors());
+app.use(cors({
+    origin: 'https://sport1-16455.onrender.com',
+  }));
 mongoose.connect(process.env.MONGO_URL)
 .then(console.log("connected to mogodb succefully"))
 .catch((err)=>console.log(err));
