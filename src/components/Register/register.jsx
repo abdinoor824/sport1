@@ -2,13 +2,14 @@ import React from "react";
 import "./Register.css";
 import { useState } from "react";
 import axios from "axios"
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors,setErrors] =useState(false);
-
+const navigate = useNavigate()
 
   const handleSubmit= async (e)=>{
     e.preventDefault();
@@ -20,7 +21,7 @@ const Register = () => {
       password
     });
   
-     res.data && window.location.replace("/login");
+     res.data && navigate("/login");
   }catch(err){
    setErrors(true)
   }
