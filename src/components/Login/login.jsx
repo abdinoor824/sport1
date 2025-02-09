@@ -17,7 +17,7 @@ const [username, setUsername] = useState("");
     e.preventDefault();
     setErrors(false)
   try{
-    const res = await axios.post("http://localhost:10000/api/user/login",{
+    const res = await axios.post("https://sport1-api.onrender.com/api/user/login",{
       username,
       
       password

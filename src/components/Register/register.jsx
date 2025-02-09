@@ -14,7 +14,7 @@ const Register = () => {
     e.preventDefault();
     setErrors(false)
   try{
-    const res = await axios.post("http://localhost:10000/api/user/register",{
+    const res = await axios.post("https://sport1-api.onrender.com/api/user/register",{
       username,
       email,
       password
