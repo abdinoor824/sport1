@@ -14,10 +14,11 @@ const navigate = useNavigate()
 const handleRegister = () => {
   setIsLoading(true);
 
+  // Simulate a network request
   setTimeout(() => {
- 
+    // Add your registration logic here
     setIsLoading(false);
-  }, 3000); // Simulate a 2-second delay
+  }, 2000); // Simulate a 2-second delay
 };
 
   const handleSubmit= async (e)=>{
@@ -30,7 +31,7 @@ const handleRegister = () => {
       password
     });
   
-    res.data && window.location.replace("/login");
+     res.data && navigate("/login");
   }catch(err){
    setErrors(true)
   }
@@ -66,7 +67,7 @@ const handleRegister = () => {
               name="password"
               onChange={(e)=>setPassword(e.target.value)}
               required />
-              <button onClick={handleRegister} disabled={isLoading}>
+            <button onClick={handleRegister} disabled={isLoading} type="submit">
       {isLoading ? 'Registering...' : 'Register'}
     </button>
             {errors &&<span style={{color:"red",marginTop:"10px"}}>something went wrong. please try again</span>}
