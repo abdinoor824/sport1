@@ -6,10 +6,19 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [username, setUsername] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors,setErrors] =useState(false);
 const navigate = useNavigate()
+const handleRegister = () => {
+  setIsLoading(true);
+
+  setTimeout(() => {
+ 
+    setIsLoading(false);
+  }, 3000); // Simulate a 2-second delay
+};
 
   const handleSubmit= async (e)=>{
     e.preventDefault();
@@ -57,8 +66,10 @@ const navigate = useNavigate()
               name="password"
               onChange={(e)=>setPassword(e.target.value)}
               required />
-            <button type="submit">Register</button>
-            {errors &&<span style={{color:"red",marginTop:"10px"}}>something went wrong</span>}
+              <button onClick={handleRegister} disabled={isLoading}>
+      {isLoading ? 'Registering...' : 'Register'}
+    </button>
+            {errors &&<span style={{color:"red",marginTop:"10px"}}>something went wrong. please try again</span>}
           </form>
         </div>
       </div>
