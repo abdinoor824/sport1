@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import Footer from "./foters";
 import myimage from "../../images/myimage.jpg";
+import CaptainImage from "../../images/captain.jpg";
 
 const Home = () => {
   return (
@@ -26,12 +27,9 @@ const Home = () => {
           </div>
         </div>
         <div className="container-3">
+          <p>THE CAPTAIN</p>
           <div className="image-one">
-            <img
-              src="https://cdn.dribbble.com/userupload/10686467/file/original-cf91f1b65e63b049396e7b9130c1a9e2.png?resize=752x&vertical=center"
-              alt=""
-              className="image"
-            />
+          <img src={CaptainImage} alt="my apload" className="image"  />
           </div>
           <p>
             Ready to Dive In? Create your profile, explore the content, and get
@@ -44,7 +42,7 @@ const Home = () => {
 
         <div className="container-3">
           <div className="image-one">
-           
+          
           </div>
           <div>
             <h2>What Awaits You: </h2>

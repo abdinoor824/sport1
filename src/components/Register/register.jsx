@@ -55,6 +55,7 @@ const navigate = useNavigate()
              type="password" 
              id="password"
               name="password"
+              placeholder="enter you password"
               onChange={(e)=>setPassword(e.target.value)}
               required />
             <button type="submit">Register</button>
