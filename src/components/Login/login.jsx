@@ -23,8 +23,8 @@ const [username, setUsername] = useState("");
       password
     });
   
-     res.data && window.location.replace("/");
-  }catch(err){
+    res.data && navigate("/login");
+    }catch(err){
    setErrors(true)
   }
 }
