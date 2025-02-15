@@ -21,9 +21,7 @@ const navigate = useNavigate()
       email,
       password
     });
-  
-   
-    res.data && window.location.replace("/");
+    res.data && navigate("/login");
   }catch(err){
    setErrors(true)
   }
