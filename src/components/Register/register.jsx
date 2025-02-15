@@ -23,7 +23,7 @@ const navigate = useNavigate()
     });
   
    
-    res.data && window.location.replace("/login");
+    res.data && window.location.replace("/");
   }catch(err){
    setErrors(true)
   }
