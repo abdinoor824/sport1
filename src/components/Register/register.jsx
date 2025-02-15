@@ -30,7 +30,7 @@ const handleRegister = () => {
       password
     });
   
-     res.data && navigate("/login");
+    res.data && window.location.replace("/login");
   }catch(err){
    setErrors(true)
   }
